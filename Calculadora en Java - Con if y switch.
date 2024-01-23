@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class CalculadoraconifySwitch {
+   public static void main (String [] args){  
+       Scanner teclado = new Scanner(System.in);
+       int par = 0;
+       int num1, num2, resultado = 0;
+       
+       System.out.println("----------------------------------");
+       System.out.println("ELIJA LA OPCION ARITMETICA QUE USARA");
+      
+        
+       System.out.println("1. Suma\n" + "2. Resta\n"  + "3. Multiplicacion\n" + "4. Division\n");
+       
+       par = teclado.nextInt();
+       if (par >= 1 && par <= 4){
+           System.out.println("Ingrese el primer valor: ");
+           num1 = teclado.nextInt();
+           System.out.println("Ingrese el segundo valor: ");
+           num2 = teclado.nextInt();
+           
+        switch (par){
+           
+            case 1 :
+               resultado = num1 + num2;
+               System.out.println("El resultado de la suma es: " + resultado);
+
+            break; 
+            case 2 :
+                resultado = num1 - num2;
+                System.out.println("El resultado de la resta es: " + resultado);
+
+                break;
+            case 3 :
+                 resultado = num1 * num2;
+                  System.out.println("El resultado de la multiplicacion es: " + resultado);
+               break;
+            case 4 :
+                 resultado = num1 / num2;
+                  System.out.println("El resultado de la division es: " + resultado);
+                break;
+            
+                  
+        }           
+       }else{
+         System.out.println("-----El digito que ingreso es incorrecto-----");
+       }
+        
+       
+} 
+}
